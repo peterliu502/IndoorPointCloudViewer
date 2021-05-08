@@ -10,5 +10,3 @@ add_definitions(${PCL_DEFINITIONS} )
 
 add_executable(geo1101 main.cpp)
 target_link_libraries (geo1101 ${PCL_LIBRARIES})
-#add_executable(preprocess preprocess.cpp)
-#target_link_libraries (preprocess ${PCL_LIBRARIES})
