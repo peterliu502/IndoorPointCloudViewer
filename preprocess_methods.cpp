@@ -13,17 +13,17 @@ int read_pts(std::string& path, const pcl::PointCloud<pcl::PointXYZI>::Ptr& pts
 
     std::cout << "Loaded "
               << pts->width * pts->height
-              << " points from the file with the following fields: "
+              << " points from the input file."
               << std::endl;
 
-    for (int i = 0; i < 5; ++i){
-        auto point = pts->points[i];
-        std::cout << "    " << point.x
-                  << " "    << point.y
-                  << " "    << point.z
-                  << " "    << point.intensity
-                  <<std::endl;
-    }
+//    for (int i = 0; i < 5; ++i){
+//        auto point = pts->points[i];
+//        std::cout << "    " << point.x
+//                  << " "    << point.y
+//                  << " "    << point.z
+//                  << " "    << point.intensity
+//                  <<std::endl;
+//    }
 
     return 0;
 }
@@ -32,6 +32,7 @@ void remove_outliers(pcl::PointCloud<pcl::PointXYZI>::Ptr& pts_in,
                      pcl::PointCloud<pcl::PointXYZI>::Ptr& pts_out,
                      double r,
                      int min_neighbours){
+    pts_out->clear();
     pcl::RadiusOutlierRemoval<pcl::PointXYZI> pcFilter;    // create a filter object
     pcFilter.setInputCloud(pts_in);                        // import the pts_in into the filter object
     pcFilter.setRadiusSearch(r);                           // set the radius of the search circle
@@ -118,8 +119,9 @@ void remove_fake_faces(pcl::PointCloud<pcl::PointXYZI>::Ptr& pts,
     }
 }
 
-void remove_floors( pcl::PointCloud<pcl::PointXYZI>::Ptr& pts,
-                    pcl::PointCloud<pcl::PointXYZI>::Ptr& pts_without_floors,
+void extract_floors( pcl::PointCloud<pcl::PointXYZI>::Ptr& pts,
+                    pcl::PointCloud<pcl::PointXYZI>::Ptr& pts_roof_out,
+                    pcl::PointCloud<pcl::PointXYZI>::Ptr& pts_rest_out,
                     int roof_idx,
                     int ground_idx,
                     double r,
@@ -134,11 +136,10 @@ void remove_floors( pcl::PointCloud<pcl::PointXYZI>::Ptr& pts,
     }
 
     // remove the noise
-    pcl::PointCloud<pcl::PointXYZI>::Ptr pts_roof_out(new pcl::PointCloud<pcl::PointXYZI>);
     pcl::PointCloud<pcl::PointXYZI>::Ptr pts_ground_out(new pcl::PointCloud<pcl::PointXYZI>);
     remove_outliers(pts_roof, pts_roof_out, r, min_neighbours);
     remove_outliers(pts_ground, pts_ground_out, r, min_neighbours);
-    remove_outliers(pts_rest, pts_without_floors, r, min_neighbours + 5);
+    remove_outliers(pts_rest, pts_rest_out, r, min_neighbours + 5);
 
     // output roof part
     pcl::io::savePLYFileASCII("../data/VRR_roof_A.ply", *pts_roof_out); // output PLY (ASCII) file
@@ -146,9 +147,47 @@ void remove_floors( pcl::PointCloud<pcl::PointXYZI>::Ptr& pts,
     // output ground part
     pcl::io::savePLYFileASCII("../data/VRR_ground_A.ply", *pts_ground_out); // output PLY (ASCII) file
     pcl::io::savePLYFileBinary("../data/VRR_ground_B.ply", *pts_ground_out); // output PLY (Binary) file
-    // output the rest part
-    pcl::io::savePLYFileASCII("../data/VRR_rest_A.ply", *pts_without_floors); // output PLY (ASCII) file
-    pcl::io::savePLYFileBinary("../data/VRR_rest_B.ply", *pts_without_floors); // output PLY (Binary) file
+}
+
+void extract_non_archi(pcl::PointCloud<pcl::PointXYZI>::Ptr& pts_roof,
+                       pcl::PointCloud<pcl::PointXYZI>::Ptr& pts_rest,
+                       double size,
+                       double r,
+                       int min_neighbours){
+    std::vector<double> vec_roof_heights;
+    for (auto &pt: pts_roof->points) vec_roof_heights.push_back(pt.z);
+    double min_roof_height = min_vec_elm(vec_roof_heights);
+    pcl::PointCloud<pcl::PointXYZI>::Ptr pts_archi(new pcl::PointCloud<pcl::PointXYZI>);
+    pcl::PointCloud<pcl::PointXYZI>::Ptr pts_non_archi(new pcl::PointCloud<pcl::PointXYZI>);
+
+    // if cell's highest z value is larger than minimum roof's height,
+    // this cell's points will be consider as the architecture part
+    // or it will be the non-architecture part.
+    Grid grid_rest(pts_rest, size);
+    for (int row = 0; row < grid_rest.get_row_num(); ++row) {
+        for (int col = 0; col < grid_rest.get_col_num(); ++col) {
+            std::vector<double> vec_cell_heights;
+            for (auto &pt: grid_rest.find_cell_by_idx(row, col)->pt_vec) vec_cell_heights.push_back(pt->z);
+            double max_cell_height = max_vec_elm(vec_cell_heights);
+            if (max_cell_height >= min_roof_height - 0.2 ) for (auto &pt: grid_rest.find_cell_by_idx(row, col)->pt_vec) pts_archi->push_back(*pt);
+            else for (auto &pt: grid_rest.find_cell_by_idx(row, col)->pt_vec) pts_non_archi->push_back(*pt);
+        }
+    }
+
+    // remove the noise in non-architecture part
+    pcl::PointCloud<pcl::PointXYZI>::Ptr pts_non_archi_out(new pcl::PointCloud<pcl::PointXYZI>);
+    pcl::PointCloud<pcl::PointXYZI>::Ptr pts_non_archi_tmp1(new pcl::PointCloud<pcl::PointXYZI>);
+    pcl::PointCloud<pcl::PointXYZI>::Ptr pts_non_archi_tmp2(new pcl::PointCloud<pcl::PointXYZI>);
+    remove_outliers(pts_non_archi, pts_non_archi_tmp1, r, min_neighbours);
+    remove_outliers(pts_non_archi_tmp1, pts_non_archi_tmp2, r, min_neighbours);
+    remove_outliers(pts_non_archi_tmp2, pts_non_archi_out, r, min_neighbours);
+
+    // output architecture part
+    pcl::io::savePLYFileASCII("../data/VRR_rest_archi_A.ply", *pts_archi); // output PLY (ASCII) file
+    pcl::io::savePLYFileBinary("../data/VRR_rest_archi_B.ply", *pts_archi); // output PLY (Binary) file
+    // output non-architecture part
+    pcl::io::savePLYFileASCII("../data/VRR_rest_nonarchi_A.ply", *pts_non_archi_out); // output PLY (ASCII) file
+    pcl::io::savePLYFileBinary("../data/VRR_rest_nonarchi_B.ply", *pts_non_archi_out); // output PLY (Binary) file
 };
 
 void write_pts(std::string& path_A, std::string& path_B, const pcl::PointCloud<pcl::PointXYZI>::Ptr& pts){
