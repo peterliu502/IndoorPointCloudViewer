@@ -30,5 +30,5 @@ For `Mac` and `Linux` users, you can use the official recommended way to install
 For `Clion` users, `Vcpkg` is best used in conjunction with the `CMake` files, as shown in the tutorial [here](https://github.com/microsoft/vcpkg#vcpkg-with-clion).  
 2. Compile the CPP program  
 Using Release mode to build the `main.cpp`, then the build folder will be created.  
-3. Run run.py
+3. Run run.py  
 Run the `run.py` and the output files are in the `./data` folder
