@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 14)
 find_package(PCL 1.3 REQUIRED COMPONENTS common io filters)
 include_directories(${PCL_INCLUDE_DIRS})
 link_directories(${PCL_LIBRARY_DIRS})
-add_definitions(${PCL_DEFINITIONS} )
+add_definitions(${PCL_DEFINITIONS})
 
 add_executable(geo1101 main.cpp)
 target_link_libraries (geo1101 ${PCL_LIBRARIES})
