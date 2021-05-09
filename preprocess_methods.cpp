@@ -142,11 +142,11 @@ void extract_floors( pcl::PointCloud<pcl::PointXYZI>::Ptr& pts,
     remove_outliers(pts_rest, pts_rest_out, r, min_neighbours + 5);
 
     // output roof part
-    pcl::io::savePLYFileASCII("../data/VRR_roof_A.ply", *pts_roof_out); // output PLY (ASCII) file
-    pcl::io::savePLYFileBinary("../data/VRR_roof_B.ply", *pts_roof_out); // output PLY (Binary) file
+    pcl::io::savePLYFileASCII("./data/VRR_roof_A.ply", *pts_roof_out); // output PLY (ASCII) file
+    pcl::io::savePLYFileBinary("./data/VRR_roof_B.ply", *pts_roof_out); // output PLY (Binary) file
     // output ground part
-    pcl::io::savePLYFileASCII("../data/VRR_ground_A.ply", *pts_ground_out); // output PLY (ASCII) file
-    pcl::io::savePLYFileBinary("../data/VRR_ground_B.ply", *pts_ground_out); // output PLY (Binary) file
+    pcl::io::savePLYFileASCII("./data/VRR_ground_A.ply", *pts_ground_out); // output PLY (ASCII) file
+    pcl::io::savePLYFileBinary("./data/VRR_ground_B.ply", *pts_ground_out); // output PLY (Binary) file
 }
 
 void extract_non_archi(pcl::PointCloud<pcl::PointXYZI>::Ptr& pts_roof,
@@ -183,11 +183,11 @@ void extract_non_archi(pcl::PointCloud<pcl::PointXYZI>::Ptr& pts_roof,
     remove_outliers(pts_non_archi_tmp2, pts_non_archi_out, r, min_neighbours);
 
     // output architecture part
-    pcl::io::savePLYFileASCII("../data/VRR_rest_archi_A.ply", *pts_archi); // output PLY (ASCII) file
-    pcl::io::savePLYFileBinary("../data/VRR_rest_archi_B.ply", *pts_archi); // output PLY (Binary) file
+    pcl::io::savePLYFileASCII("./data/VRR_rest_archi_A.ply", *pts_archi); // output PLY (ASCII) file
+    pcl::io::savePLYFileBinary("./data/VRR_rest_archi_B.ply", *pts_archi); // output PLY (Binary) file
     // output non-architecture part
-    pcl::io::savePLYFileASCII("../data/VRR_rest_nonarchi_A.ply", *pts_non_archi_out); // output PLY (ASCII) file
-    pcl::io::savePLYFileBinary("../data/VRR_rest_nonarchi_B.ply", *pts_non_archi_out); // output PLY (Binary) file
+    pcl::io::savePLYFileASCII("./data/VRR_rest_nonarchi_A.ply", *pts_non_archi_out); // output PLY (ASCII) file
+    pcl::io::savePLYFileBinary("./data/VRR_rest_nonarchi_B.ply", *pts_non_archi_out); // output PLY (Binary) file
 };
 
 void write_pts(std::string& path_A, std::string& path_B, const pcl::PointCloud<pcl::PointXYZI>::Ptr& pts){
