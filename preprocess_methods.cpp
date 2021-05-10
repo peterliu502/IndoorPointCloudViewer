@@ -126,12 +126,22 @@ void extract_floors( pcl::PointCloud<pcl::PointXYZI>::Ptr& pts,
                     int ground_idx,
                     double r,
                     int min_neighbours){
+    std::vector<double> vec_roof_z;
+    std::vector<double> vec_ground_z;
     pcl::PointCloud<pcl::PointXYZI>::Ptr pts_roof(new pcl::PointCloud<pcl::PointXYZI>);
     pcl::PointCloud<pcl::PointXYZI>::Ptr pts_ground(new pcl::PointCloud<pcl::PointXYZI>);
     pcl::PointCloud<pcl::PointXYZI>::Ptr pts_rest(new pcl::PointCloud<pcl::PointXYZI>);
+
+    for(auto ptr: pts->points) {
+            if (int(ptr.intensity) == roof_idx) vec_roof_z.push_back(ptr.z);
+            else if (int(ptr.intensity) == ground_idx) vec_ground_z.push_back(ptr.z);
+    }
+    double min_roof_z = min_vec_elm(vec_roof_z) + 0.5 * abs(max_vec_elm(vec_roof_z) - max_vec_elm(vec_roof_z));
+    double max_ground_z = max_vec_elm(vec_ground_z);
+
     for(auto ptr: pts->points){
-        if (int(ptr.intensity) == roof_idx) pts_roof->push_back(ptr);
-        else if (int(ptr.intensity) == ground_idx) pts_ground->push_back(ptr);
+        if ((ptr.z) >= min_roof_z) pts_roof->push_back(ptr);
+        else if ((ptr.z) <= max_ground_z) pts_ground->push_back(ptr);
         else pts_rest->push_back(ptr);
     }
 
