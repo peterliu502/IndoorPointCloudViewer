@@ -31,4 +31,11 @@ For `Clion` users, `Vcpkg` is best used in conjunction with the `CMake` files, a
 2. Compile the CPP program  
 Using Release mode to build the `main.cpp`, then the build folder will be created.  
 3. Run run.py  
-Run the `run.py` and the output files are in the `./data` folder
+Run the `run.py` and the output files are in the `./data` folder  
+The meaning of the 4th attribute values in txt files:  
+```
+0: roof
+1: ground
+2: architecture part
+3: non-architecture part
+```
