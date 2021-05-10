@@ -12,3 +12,4 @@ print("RUN: " + target_filename + " from " + main)
 os.system(main)
 
 pm.ply2txt()
+pm.merge_txt()
