@@ -4,7 +4,7 @@ GEO1101 Project 5: 3D Representations for Visual Insight
 [@Runnan Fu](https://github.com/runnanfu)
 [@Yuzhen Jin](https://github.com/yuzhenjin3000)
 [@Zhenyu Liu](https://github.com/peterliu502)
-[@Xenia U. Mainelli]()
+[@Xenia U. Mainelli](x.u.mainelli@student.tudelft.nl)
 [@Theodoros Papakostas](https://github.com/tpapakostas)
 [@Linjun Wang](https://github.com/fiodccobw)
 
