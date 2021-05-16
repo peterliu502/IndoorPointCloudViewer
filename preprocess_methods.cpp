@@ -29,7 +29,7 @@ int read_pts(std::string& path, const pcl::PointCloud<pcl::PointXYZI>::Ptr& pts
 }
 
 void remove_outliers(pcl::PointCloud<pcl::PointXYZI>::Ptr& pts_in,
-                     pcl::PointCloud<pcl::PointXYZI>::Ptr& pts_out,
+                       pcl::PointCloud<pcl::PointXYZI>::Ptr& pts_out,
                      double r,
                      int min_neighbours){
     pts_out->clear();
