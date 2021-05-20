@@ -12,9 +12,9 @@ GEO1101 Project 5: 3D Representations for Visual Insight
 ```
 geo1101
  ├─ data: store the input and output files
- │   ├─ VRR.pcd: input classified file
- │   ├─ *.ply the segmentation result of VRR.pcd
- │   └─ *.txt the text version converted from pcd
+ │   ├─ pointclouds: store the point clouds data
+ │   ├─ meshes: store the meshes data
+ │   └─ voxels: store the voxels data
  ├─ main.cpp: the main workflow of the whole project
  ├─ preprocess.cpp: the workflow of the preprocess
  ├─ preprocess_methods.cpp: functions and data structures used to form the sub_steps in preprocess.cpp
