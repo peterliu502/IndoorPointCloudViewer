@@ -4,7 +4,7 @@ import os
 def ply2txt():
     fileNum = 0
     while fileNum != 9:
-        filePath = '.\\data\\'
+        filePath = '.\\data\\pointclouds\\'
         ls_path = os.listdir(filePath)
         fileNum = 0
 
@@ -35,8 +35,8 @@ def ply2txt():
 
 
 def merge_txt():
-    filePath = '.\\data\\'
-    filename_out = 'VRR_preprocessed.txt'
+    filePath = '.\\data\\pointclouds\\'
+    filename_out = 'POINTCLOUDS_preprocessed.txt'
     ls_path = os.listdir(filePath)
     with open(filePath + filename_out, 'w', encoding='utf-8') as file_write:
         for filename in ls_path:
@@ -44,4 +44,4 @@ def merge_txt():
                 with open(filePath + filename, 'r+', encoding='utf-8') as file_read:
                     for line in file_read.readlines():
                         file_write.write(line)
-    print("MERGE: VRR_preprocessed.txt")
+    print("MERGE: POINTCLOUDS_preprocessed.txt")
