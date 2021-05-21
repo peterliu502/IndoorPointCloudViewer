@@ -3,6 +3,7 @@
 #include <pcl/filters/radius_outlier_removal.h>
 #include <vector>
 #include <map>
+#include "./voxeliser/Workflow.h"
 
 class Cell{
 private:

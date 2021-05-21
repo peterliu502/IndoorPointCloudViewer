@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="geo1101" targetName="geo1101" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Release-Visual Studio" CONFIG_NAME="Release" TOOLCHAIN_NAME="Visual Studio" GENERATION_OPTIONS="-DCMAKE_TOOLCHAIN_FILE=D:/ProgramFiles/vcpkg/scripts/buildsystems/vcpkg.cmake" ENABLED="true" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="12250651-d0bb-4493-88b6-2c33796462b1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/geo1101.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/geo1101.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic_methods.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/basic_methods.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preprocess_methods.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/preprocess_methods.cpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1sE0nYwzAOmORqDX3gKoaQFf6l6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../geo1004/hw1" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\myPython\geo1101\code\geo1101" />
+      <recent name="E:\myPython\geo1101\code\geo1101\data" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.run">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="geo1101" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="geo1101" TARGET_NAME="geo1101" CONFIG_NAME="Release-Visual Studio" RUN_TARGET_PROJECT_NAME="geo1101" RUN_TARGET_NAME="geo1101">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="run" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="geo1101" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="D:\ProgramFiles\anaconda3\envs\py3-8\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.geo1101" />
+      <item itemvalue="Python.run" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="12250651-d0bb-4493-88b6-2c33796462b1" name="Default Changelist" comment="" />
+      <created>1620422609898</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1620422609898</updated>
+      <workItem from="1620422613869" duration="45523000" />
+      <workItem from="1620504807389" duration="2172000" />
+      <workItem from="1620506996580" duration="68000" />
+      <workItem from="1620508172191" duration="4648000" />
+      <workItem from="1620581404882" duration="6785000" />
+      <workItem from="1620652046854" duration="5802000" />
+      <workItem from="1620658209811" duration="651000" />
+      <workItem from="1620659530223" duration="1732000" />
+      <workItem from="1620661432726" duration="766000" />
+      <workItem from="1621182435916" duration="1552000" />
+      <workItem from="1621451937375" duration="582000" />
+      <workItem from="1621454151681" duration="121000" />
+      <workItem from="1621454357105" duration="10573000" />
+      <workItem from="1621485537082" duration="10593000" />
+      <workItem from="1621561962145" duration="12161000" />
+    </task>
+    <task id="LOCAL-00001" summary="remove the noise in remove_floors()">
+      <created>1620463390170</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1620463390170</updated>
+    </task>
+    <task id="LOCAL-00002" summary="segment the non-archi part">
+      <created>1620487826752</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1620487826752</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add new ply files">
+      <created>1620487865344</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1620487865344</updated>
+    </task>
+    <task id="LOCAL-00004" summary="modify the CMakeLists.txt">
+      <created>1620496658224</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1620496658224</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add ply2txt.py and txt files">
+      <created>1620581635499</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1620581635499</updated>
+    </task>
+    <task id="LOCAL-00006" summary="updata ply2txt.py">
+      <created>1620585306503</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1620585306503</updated>
+    </task>
+    <task id="LOCAL-00007" summary="update run.py py_methods.py">
+      <created>1620590979988</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1620590979988</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add details in README.me">
+      <created>1620591009878</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1620591009878</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add details in README.me">
+      <created>1620652315899</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1620652315899</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add merge_txt() in py_methods.py">
+      <created>1620656456127</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1620656456127</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add VRR_preprocessed.txt">
+      <created>1620658529608</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1620658529608</updated>
+    </task>
+    <task id="LOCAL-00012" summary="UPDATE segmentation methods">
+      <created>1620661711542</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1620661711542</updated>
+    </task>
+    <task id="LOCAL-00013" summary="UPDATE README.md">
+      <created>1620661989026</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1620661989026</updated>
+    </task>
+    <task id="LOCAL-00014" summary="UPDATE README.md">
+      <created>1620662198740</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1620662198740</updated>
+    </task>
+    <task id="LOCAL-00015" summary="UPDATE README.md">
+      <created>1621523956837</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1621523956837</updated>
+    </task>
+    <task id="LOCAL-00016" summary="UPDATE README.md">
+      <created>1621528564964</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1621528564964</updated>
+    </task>
+    <task id="LOCAL-00017" summary="add mesh module">
+      <created>1621560330297</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1621560330298</updated>
+    </task>
+    <task id="LOCAL-00018" summary="add mesh module">
+      <created>1621561313554</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1621561313554</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="remove the noise in remove_floors()" />
+    <MESSAGE value="segment the non-archi part" />
+    <MESSAGE value="add new ply files" />
+    <MESSAGE value="modify the CMakeLists.txt" />
+    <MESSAGE value="add ply2txt.py and txt files" />
+    <MESSAGE value="updata ply2txt.py" />
+    <MESSAGE value="update run.py py_methods.py" />
+    <MESSAGE value="add details in README.me" />
+    <MESSAGE value="add merge_txt() in py_methods.py" />
+    <MESSAGE value="add VRR_preprocessed.txt" />
+    <MESSAGE value="UPDATE segmentation methods" />
+    <MESSAGE value="UPDATE README.md" />
+    <MESSAGE value="add mesh module" />
+    <option name="LAST_COMMIT_MESSAGE" value="add mesh module" />
+  </component>
+</project>
