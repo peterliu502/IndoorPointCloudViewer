@@ -15,7 +15,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12250651-d0bb-4493-88b6-2c33796462b1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preprocess_methods.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/preprocess_methods.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +132,7 @@
       <workItem from="1621454151681" duration="121000" />
       <workItem from="1621454357105" duration="10573000" />
       <workItem from="1621485537082" duration="10593000" />
-      <workItem from="1621561962145" duration="12991000" />
+      <workItem from="1621561962145" duration="13490000" />
     </task>
     <task id="LOCAL-00001" summary="remove the noise in remove_floors()">
       <created>1620463390170</created>
@@ -274,7 +274,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621629555762</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="correct typos">
+      <created>1621629974213</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1621629974213</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,6 +315,7 @@
     <MESSAGE value="add mesh module" />
     <MESSAGE value="add voxel module" />
     <MESSAGE value="add voxeliser info in README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="add voxeliser info in README.md" />
+    <MESSAGE value="correct typos" />
+    <option name="LAST_COMMIT_MESSAGE" value="correct typos" />
   </component>
 </project>
