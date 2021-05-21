@@ -4,10 +4,17 @@
 #include <pcl/kdtree/kdtree_flann.h>
 #include <pcl/features/normal_3d.h>
 #include <pcl/surface/gp3.h>
-#include <pcl/surface/mls.h>
+#include <CGAL/Exact_predicates_inexact_constructions_kernel.h>
+#include <CGAL/Point_set_3.h>
+#include <CGAL/jet_smooth_point_set.h>
 #include <cstring>
 #include <string>
 #include "basic_methods.cpp"
+
+typedef CGAL::Exact_predicates_inexact_constructions_kernel Kernel;
+typedef Kernel::Point_3 Point_3;
+typedef Kernel::Vector_3 Vector_3;
+typedef CGAL::Point_set_3<Point_3, Vector_3> Point_set;
 
 int read_pts(std::string& path, const pcl::PointCloud<pcl::PointXYZI>::Ptr& pts
 ){
@@ -127,23 +134,22 @@ void remove_fake_faces(pcl::PointCloud<pcl::PointXYZI>::Ptr& pts,
 }
 
 void mls_smooth(pcl::PointCloud<pcl::PointXYZI>::Ptr &cloud,
-                pcl::PointCloud<pcl::PointNormal>::Ptr &result){
+                pcl::PointCloud<pcl::PointXYZ>::Ptr &result){
     // smooth the point clouds
-    pcl::search::KdTree<pcl::PointXYZI>::Ptr search(new pcl::search::KdTree<pcl::PointXYZI>);
-    pcl::MovingLeastSquares<pcl::PointXYZI, pcl::PointNormal> mls;
-    std::cout << cloud->points.size() << std::endl;
-    search->setInputCloud(cloud);
-    std::cout << search->input_->size() << std::endl;
-    mls.setComputeNormals(true);
-    mls.setInputCloud(cloud);
-    mls.setPolynomialFit(true);
-    mls.setPolynomialOrder(5);
-    mls.setSearchMethod(search);
-    mls.setSearchRadius(0.015); // Level of smooth
-    mls.process(*result);
+    Point_set cloud_temp;
+    for (auto &pt: cloud->points){
+        cloud_temp.insert(Point_3(pt.x, pt.y, pt.z));
+    }
+
+    CGAL::jet_smooth_point_set<CGAL::Sequential_tag> (cloud_temp, 50);
+
+    for (int i = 0; i < cloud_temp.size(); ++i){
+        auto pt = cloud_temp.point(i);
+        result->push_back(pcl::PointXYZ(pt.x(), pt.y(), pt.z()));
+    }
 }
 
-void pt2mesh(const std::string& file_out, pcl::PointCloud<pcl::PointNormal>::Ptr& pts){
+void pt2mesh(const std::string& file_out, pcl::PointCloud<pcl::PointXYZ>::Ptr& pts){
 
     pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>);
     for (auto &pt: pts->points) cloud->push_back(pcl::PointXYZ(pt.x, pt.y, pt.z));
@@ -226,7 +232,7 @@ void extract_floors(pcl::PointCloud<pcl::PointXYZI>::Ptr& pts,
     std::cout << "OUTPUT: POINTCLOUDS_roof_A.ply" << std::endl;
     pcl::io::savePLYFileBinary("./data/pointclouds/POINTCLOUDS_roof_B.ply", *pts_roof_out); // output PLY (Binary) file
     std::cout << "OUTPUT: POINTCLOUDS_roof_B.ply" << std::endl;
-    pcl::PointCloud<pcl::PointNormal>::Ptr result_roof (new pcl::PointCloud<pcl::PointNormal>);
+    pcl::PointCloud<pcl::PointXYZ>::Ptr result_roof (new pcl::PointCloud<pcl::PointXYZ>);
     mls_smooth(pts_roof_out, result_roof);
     pt2mesh("./data/meshes/MESH_roof.ply", result_roof); // output mesh file
     std::cout << "OUTPUT: MESH_roof.ply" << std::endl;
@@ -236,7 +242,7 @@ void extract_floors(pcl::PointCloud<pcl::PointXYZI>::Ptr& pts,
     std::cout << "OUTPUT: POINTCLOUDS_ground_A.ply" << std::endl;
     pcl::io::savePLYFileBinary("./data/pointclouds/POINTCLOUDS_ground_B.ply", *pts_ground_out); // output PLY (Binary) file
     std::cout << "OUTPUT: POINTCLOUDS_ground_B.ply" << std::endl;
-    pcl::PointCloud<pcl::PointNormal>::Ptr result_ground (new pcl::PointCloud<pcl::PointNormal>);
+    pcl::PointCloud<pcl::PointXYZ>::Ptr result_ground (new pcl::PointCloud<pcl::PointXYZ>);
     mls_smooth(pts_ground_out, result_ground);
     pt2mesh("./data/meshes/MESH_ground.ply", result_ground); // output mesh file
     std::cout << "OUTPUT: MESH_ground.ply" << std::endl;
@@ -283,7 +289,7 @@ void extract_non_archi(pcl::PointCloud<pcl::PointXYZI>::Ptr& pts_roof,
     std::cout << "OUTPUT: POINTCLOUDS_rest_archi_A.ply" << std::endl;
     pcl::io::savePLYFileBinary("./data/pointclouds/POINTCLOUDS_rest_archi_B.ply", *pts_archi); // output PLY (Binary) file
     std::cout << "OUTPUT: POINTCLOUDS_rest_archi_B.ply" << std::endl;
-    pcl::PointCloud<pcl::PointNormal>::Ptr result_archi (new pcl::PointCloud<pcl::PointNormal>);
+    pcl::PointCloud<pcl::PointXYZ>::Ptr result_archi (new pcl::PointCloud<pcl::PointXYZ>);
     mls_smooth(pts_archi, result_archi);
     pt2mesh("./data/meshes/MESH_rest_archi.ply", result_archi); // output mesh file
     std::cout << "OUTPUT: MESH_rest_archi.ply" << std::endl;
@@ -293,7 +299,7 @@ void extract_non_archi(pcl::PointCloud<pcl::PointXYZI>::Ptr& pts_roof,
     std::cout << "OUTPUT: POINTCLOUDS_rest_nonarchi_A.ply" << std::endl;
     pcl::io::savePLYFileBinary("./data/pointclouds/POINTCLOUDS_rest_nonarchi_B.ply", *pts_non_archi_out); // output PLY (Binary) file
     std::cout << "OUTPUT: POINTCLOUDS_rest_nonarchi_B.ply" << std::endl;
-    pcl::PointCloud<pcl::PointNormal>::Ptr result_non_archi (new pcl::PointCloud<pcl::PointNormal>);
+    pcl::PointCloud<pcl::PointXYZ>::Ptr result_non_archi (new pcl::PointCloud<pcl::PointXYZ>);
     mls_smooth(pts_non_archi_out, result_non_archi);
     pt2mesh("./data/meshes/MESH_rest_nonarchi.ply", result_non_archi); // output mesh file
     std::cout << "OUTPUT: MESH_rest_nonarchi.ply" << std::endl;

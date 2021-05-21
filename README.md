@@ -28,9 +28,16 @@ geo1101
 For `Windows` users, it is highly recommended to use [`Vcpkg`](https://github.com/microsoft/vcpkg/releases) to install [`PCL`](https://pointclouds.org/downloads/).  
 For `Mac` and `Linux` users, you can use the official recommended way to install it first. If there are problems in the following steps, yu can also use `Vcpkg`.  
 For `Clion` users, `Vcpkg` is best used in conjunction with the `CMake` files, as shown in the tutorial [here](https://github.com/microsoft/vcpkg#vcpkg-with-clion).  
-2. Compile the CPP program  
+
+2. Install CGAL library  
+Make sure that you have installed `Vcpkg`.   
+The tutorial for `Windows` thick [here](https://doc.cgal.org/latest/Manual/windows.html).  
+The tutorial for `Mac` or `Linux` thick [here](https://doc.cgal.org/latest/Manual/usage.html).  
+
+3. Compile the CPP program  
 Using Release mode to build the `main.cpp`, then the build folder will be created.  
-3. Run run.py  
+
+4. Run run.py  
 Run the `run.py` and the output files are in the `./data` folder  
 The meaning of the 4th attribute values in txt files:  
 ```
