@@ -15,7 +15,7 @@ geo1101
  │   ├─ pointclouds: store the point clouds data
  │   ├─ meshes: store the meshes data
  │   └─ voxels: store the voxels data
- ├─ voxelizer: the module of voxelization, based on the GEO1004 HW01
+ ├─ voxeliser: the module of voxelization, based on the GEO1004 HW01
  ├─ main.cpp: the main workflow of the whole project
  ├─ preprocess.cpp: the workflow of the preprocess
  ├─ preprocess_methods.cpp: functions and data structures used to form the sub_steps in preprocess.cpp
