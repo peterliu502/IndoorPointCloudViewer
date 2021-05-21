@@ -31,8 +31,8 @@ For `Clion` users, `Vcpkg` is best used in conjunction with the `CMake` files, a
 
 2. Install CGAL library  
 Make sure that you have installed `Vcpkg`.   
-The tutorial for `Windows` thick [here](https://doc.cgal.org/latest/Manual/windows.html).  
-The tutorial for `Mac` or `Linux` thick [here](https://doc.cgal.org/latest/Manual/usage.html).  
+The tutorial for `Windows` click [here](https://doc.cgal.org/latest/Manual/windows.html).  
+The tutorial for `Mac` or `Linux` click [here](https://doc.cgal.org/latest/Manual/usage.html).  
 
 3. Compile the CPP program  
 Using Release mode to build the `main.cpp`, then the build folder will be created.  
