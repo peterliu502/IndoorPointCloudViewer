@@ -15,6 +15,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12250651-d0bb-4493-88b6-2c33796462b1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_preprocessed.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_preprocessed.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_archi_A.ply" beforeDir="false" afterPath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_archi_A.ply" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_archi_A.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_archi_A.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_archi_B.ply" beforeDir="false" afterPath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_archi_B.ply" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_nonarchi_A.ply" beforeDir="false" afterPath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_nonarchi_A.ply" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_nonarchi_A.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_nonarchi_A.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_nonarchi_B.ply" beforeDir="false" afterPath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_nonarchi_B.ply" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preprocess.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/preprocess.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/preprocess_methods.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/preprocess_methods.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +34,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Release-Visual Studio" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -67,12 +77,7 @@
       <recent name="E:\myPython\geo1101\code\geo1101\data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.run">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="CMake Application.geo1101">
     <configuration name="geo1101" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="geo1101" TARGET_NAME="geo1101" CONFIG_NAME="Release-Visual Studio" RUN_TARGET_PROJECT_NAME="geo1101" RUN_TARGET_NAME="geo1101">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -132,7 +137,8 @@
       <workItem from="1621454151681" duration="121000" />
       <workItem from="1621454357105" duration="10573000" />
       <workItem from="1621485537082" duration="10593000" />
-      <workItem from="1621561962145" duration="13490000" />
+      <workItem from="1621561962145" duration="14112000" />
+      <workItem from="1622218813924" duration="3955000" />
     </task>
     <task id="LOCAL-00001" summary="remove the noise in remove_floors()">
       <created>1620463390170</created>
@@ -281,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621629974213</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="upd preprocess_methods.cpp">
+      <created>1621630462305</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1621630462305</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,6 +329,7 @@
     <MESSAGE value="add voxel module" />
     <MESSAGE value="add voxeliser info in README.md" />
     <MESSAGE value="correct typos" />
-    <option name="LAST_COMMIT_MESSAGE" value="correct typos" />
+    <MESSAGE value="upd preprocess_methods.cpp" />
+    <option name="LAST_COMMIT_MESSAGE" value="upd preprocess_methods.cpp" />
   </component>
 </project>

@@ -226,7 +226,9 @@ void extract_floors(pcl::PointCloud<pcl::PointXYZI>::Ptr& pts,
                     int roof_idx,
                     int ground_idx,
                     double r,
-                    int min_neighbours){
+                    int min_neighbours,
+                    bool contain_mesh = false,
+                    bool comtain_voxel = false){
     std::vector<double> vec_roof_z;
     std::vector<double> vec_ground_z;
     pcl::PointCloud<pcl::PointXYZI>::Ptr pts_roof(new pcl::PointCloud<pcl::PointXYZI>);
@@ -258,11 +260,15 @@ void extract_floors(pcl::PointCloud<pcl::PointXYZI>::Ptr& pts,
     pcl::io::savePLYFileBinary("./data/pointclouds/POINTCLOUDS_roof_B.ply", *pts_roof_out); // output PLY (Binary) file
     std::cout << "OUTPUT: POINTCLOUDS_roof_B.ply" << std::endl;
     pcl::PointCloud<pcl::PointXYZ>::Ptr result_roof (new pcl::PointCloud<pcl::PointXYZ>);
-    mls_smooth(pts_roof_out, result_roof);
-    pt2mesh("./data/meshes/MESH_roof.ply", result_roof); // output mesh file
-    std::cout << "OUTPUT: MESH_roof.ply" << std::endl;
-    pt2voxel("./data/voxels/VOXEL_roof.obj", result_roof, 0.065); // output voxel file
-    std::cout << "OUTPUT: VOXEL_roof.obj" << std::endl;
+    if (contain_mesh){
+        mls_smooth(pts_roof_out, result_roof);
+        pt2mesh("./data/meshes/MESH_roof.ply", result_roof); // output mesh file
+        std::cout << "OUTPUT: MESH_roof.ply" << std::endl;
+    }
+    if (comtain_voxel){
+        pt2voxel("./data/voxels/VOXEL_roof.obj", result_roof, 0.065); // output voxel file
+        std::cout << "OUTPUT: VOXEL_roof.obj" << std::endl;
+    }
 
     // output ground part
     pcl::io::savePLYFileASCII("./data/pointclouds/POINTCLOUDS_ground_A.ply", *pts_ground_out); // output PLY (ASCII) file
@@ -270,19 +276,24 @@ void extract_floors(pcl::PointCloud<pcl::PointXYZI>::Ptr& pts,
     pcl::io::savePLYFileBinary("./data/pointclouds/POINTCLOUDS_ground_B.ply", *pts_ground_out); // output PLY (Binary) file
     std::cout << "OUTPUT: POINTCLOUDS_ground_B.ply" << std::endl;
     pcl::PointCloud<pcl::PointXYZ>::Ptr result_ground (new pcl::PointCloud<pcl::PointXYZ>);
-    mls_smooth(pts_ground_out, result_ground);
-    pt2mesh("./data/meshes/MESH_ground.ply", result_ground); // output mesh file
-    std::cout << "OUTPUT: MESH_ground.ply" << std::endl;
-    pt2voxel("./data/voxels/VOXEL_ground.obj", result_ground, 0.055); // output voxel file
-    std::cout << "OUTPUT: VOXEL_ground.obj" << std::endl;
-
+    if (contain_mesh){
+        mls_smooth(pts_ground_out, result_ground);
+        pt2mesh("./data/meshes/MESH_ground.ply", result_ground); // output mesh file
+        std::cout << "OUTPUT: MESH_ground.ply" << std::endl;
+    }
+    if (comtain_voxel){
+        pt2voxel("./data/voxels/VOXEL_ground.obj", result_ground, 0.055); // output voxel file
+        std::cout << "OUTPUT: VOXEL_ground.obj" << std::endl;
+    }
 }
 
 void extract_non_archi(pcl::PointCloud<pcl::PointXYZI>::Ptr& pts_roof,
                        pcl::PointCloud<pcl::PointXYZI>::Ptr& pts_rest,
                        double size,
                        double r,
-                       int min_neighbours){
+                       int min_neighbours,
+                       bool contain_mesh = false,
+                       bool comtain_voxel = false){
     std::vector<double> vec_roof_heights;
     for (auto &pt: pts_roof->points) vec_roof_heights.push_back(pt.z);
     double min_roof_height = min_vec_elm(vec_roof_heights);
@@ -299,7 +310,12 @@ void extract_non_archi(pcl::PointCloud<pcl::PointXYZI>::Ptr& pts_roof,
             for (auto &pt: grid_rest.find_cell_by_idx(row, col)->pt_vec) vec_cell_heights.push_back(pt->z);
             double max_cell_height = max_vec_elm(vec_cell_heights);
             if (max_cell_height >= min_roof_height - 0.2 ) for (auto &pt: grid_rest.find_cell_by_idx(row, col)->pt_vec) pts_archi->push_back(*pt);
-            else for (auto &pt: grid_rest.find_cell_by_idx(row, col)->pt_vec) pts_non_archi->push_back(*pt);
+            else {
+                for (auto &pt: grid_rest.find_cell_by_idx(row, col)->pt_vec) {
+                    if (pt->intensity != 4) pts_non_archi->push_back(*pt);
+//                    else pts_archi->push_back(*pt);
+                }
+            }
         }
     }
 
@@ -319,11 +335,15 @@ void extract_non_archi(pcl::PointCloud<pcl::PointXYZI>::Ptr& pts_roof,
     pcl::io::savePLYFileBinary("./data/pointclouds/POINTCLOUDS_rest_archi_B.ply", *pts_archi); // output PLY (Binary) file
     std::cout << "OUTPUT: POINTCLOUDS_rest_archi_B.ply" << std::endl;
     pcl::PointCloud<pcl::PointXYZ>::Ptr result_archi (new pcl::PointCloud<pcl::PointXYZ>);
-    mls_smooth(pts_archi, result_archi);
-    pt2mesh("./data/meshes/MESH_rest_archi.ply", result_archi); // output mesh file
-    std::cout << "OUTPUT: MESH_rest_archi.ply" << std::endl;
-    pt2voxel("./data/voxels/VOXEL_archi.obj", result_archi, 0.05); // output voxel file
-    std::cout << "OUTPUT: VOXEL_archi.obj" << std::endl;
+    if (contain_mesh){
+        mls_smooth(pts_archi, result_archi);
+        pt2mesh("./data/meshes/MESH_rest_archi.ply", result_archi); // output mesh file
+        std::cout << "OUTPUT: MESH_rest_archi.ply" << std::endl;
+    }
+    if (comtain_voxel){
+        pt2voxel("./data/voxels/VOXEL_archi.obj", result_archi, 0.05); // output voxel file
+        std::cout << "OUTPUT: VOXEL_archi.obj" << std::endl;
+    }
 
     // output non-architecture part
     pcl::io::savePLYFileASCII("./data/pointclouds/POINTCLOUDS_rest_nonarchi_A.ply", *pts_non_archi_out); // output PLY (ASCII) file
@@ -331,11 +351,15 @@ void extract_non_archi(pcl::PointCloud<pcl::PointXYZI>::Ptr& pts_roof,
     pcl::io::savePLYFileBinary("./data/pointclouds/POINTCLOUDS_rest_nonarchi_B.ply", *pts_non_archi_out); // output PLY (Binary) file
     std::cout << "OUTPUT: POINTCLOUDS_rest_nonarchi_B.ply" << std::endl;
     pcl::PointCloud<pcl::PointXYZ>::Ptr result_non_archi (new pcl::PointCloud<pcl::PointXYZ>);
-    mls_smooth(pts_non_archi_out, result_non_archi);
-    pt2mesh("./data/meshes/MESH_rest_nonarchi.ply", result_non_archi); // output mesh file
-    std::cout << "OUTPUT: MESH_rest_nonarchi.ply" << std::endl;
-    pt2voxel("./data/voxels/VOXEL_nonarchi.obj", result_non_archi, 0.05); // output voxel file
-    std::cout << "OUTPUT: VOXEL_nonarchi.obj" << std::endl;
+    if (contain_mesh){
+        mls_smooth(pts_non_archi_out, result_non_archi);
+        pt2mesh("./data/meshes/MESH_rest_nonarchi.ply", result_non_archi); // output mesh file
+        std::cout << "OUTPUT: MESH_rest_nonarchi.ply" << std::endl;
+    }
+    if (comtain_voxel){
+        pt2voxel("./data/voxels/VOXEL_nonarchi.obj", result_non_archi, 0.05); // output voxel file
+        std::cout << "OUTPUT: VOXEL_nonarchi.obj" << std::endl;
+    }
 }
 
 void write_pts(std::string& path_A, std::string& path_B, const pcl::PointCloud<pcl::PointXYZI>::Ptr& pts){
