@@ -23,8 +23,6 @@
       <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_nonarchi_A.ply" beforeDir="false" afterPath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_nonarchi_A.ply" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_nonarchi_A.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_nonarchi_A.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_nonarchi_B.ply" beforeDir="false" afterPath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_nonarchi_B.ply" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preprocess.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/preprocess.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preprocess_methods.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/preprocess_methods.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,11 +81,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="run" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="geo1101" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -138,7 +131,7 @@
       <workItem from="1621454357105" duration="10573000" />
       <workItem from="1621485537082" duration="10593000" />
       <workItem from="1621561962145" duration="14112000" />
-      <workItem from="1622218813924" duration="3955000" />
+      <workItem from="1622218813924" duration="6319000" />
     </task>
     <task id="LOCAL-00001" summary="remove the noise in remove_floors()">
       <created>1620463390170</created>
@@ -294,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621630462305</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="upd preprocess_methods.cpp">
+      <created>1622226363784</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1622226363784</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
