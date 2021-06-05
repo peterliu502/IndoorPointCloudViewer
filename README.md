@@ -1,5 +1,5 @@
 # geo1101
-GEO1101 Project 5: 3D Representations for Visual Insight
+[!project icon](https://github.com/peterliu502/geo1101/blob/15bc6d1add02f13e49f17f500e70f854ec99e73b/icon.png) GEO1101 Project 5: 3D Representations for Visual Insight
 ## Team menbers  
 [@Runnan Fu](https://github.com/runnanfu)
 [@Yuzhen Jin](https://github.com/yuzhenjin3000)
@@ -24,7 +24,7 @@ geo1101
  └─ py_methods.py: the functions and data structures written in Python
 
 ```
-## How to run this program  
+## How to run the pointclouds preprocess program  
 1. Install PCL library  
 For `Windows` users, it is highly recommended to use [`Vcpkg`](https://github.com/microsoft/vcpkg/releases) to install [`PCL`](https://pointclouds.org/downloads/).  
 For `Mac` and `Linux` users, you can use the official recommended way to install it first. If there are problems in the following steps, yu can also use `Vcpkg`.  
@@ -47,3 +47,9 @@ The meaning of the 4th attribute values in txt files:
 2: architecture part
 3: non-architecture part
 ```
+
+## How to run the pointclouds preprocess program (release version)  
+
+## How to run the IndoorPCViewer  
+
+## How to run the IndoorPCViewer (release version)  
