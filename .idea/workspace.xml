@@ -16,13 +16,6 @@
   <component name="ChangeListManager">
     <list default="true" id="12250651-d0bb-4493-88b6-2c33796462b1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_preprocessed.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_preprocessed.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_archi_A.ply" beforeDir="false" afterPath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_archi_A.ply" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_archi_A.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_archi_A.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_archi_B.ply" beforeDir="false" afterPath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_archi_B.ply" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_nonarchi_A.ply" beforeDir="false" afterPath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_nonarchi_A.ply" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_nonarchi_A.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_nonarchi_A.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_nonarchi_B.ply" beforeDir="false" afterPath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_nonarchi_B.ply" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +59,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../geo1004/hw1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../geo1004/hw2" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -132,6 +125,7 @@
       <workItem from="1621485537082" duration="10593000" />
       <workItem from="1621561962145" duration="14112000" />
       <workItem from="1622218813924" duration="6319000" />
+      <workItem from="1622494884468" duration="961000" />
     </task>
     <task id="LOCAL-00001" summary="remove the noise in remove_floors()">
       <created>1620463390170</created>
@@ -294,7 +288,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622226363784</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="upd data">
+      <created>1622495064025</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1622495064025</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -330,6 +331,7 @@
     <MESSAGE value="add voxeliser info in README.md" />
     <MESSAGE value="correct typos" />
     <MESSAGE value="upd preprocess_methods.cpp" />
-    <option name="LAST_COMMIT_MESSAGE" value="upd preprocess_methods.cpp" />
+    <MESSAGE value="upd data" />
+    <option name="LAST_COMMIT_MESSAGE" value="upd data" />
   </component>
 </project>
