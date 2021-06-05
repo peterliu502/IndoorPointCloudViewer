@@ -1,6 +1,6 @@
 # geo1101
-<img src="https://github.com/peterliu502/geo1101/blob/15bc6d1add02f13e49f17f500e70f854ec99e73b/icon.png" width = "200" height = "200" alt="project icon" align=center />  
-GEO1101 Project 5: 3D Representations for Visual Insight
+<img src="https://github.com/peterliu502/geo1101/blob/15bc6d1add02f13e49f17f500e70f854ec99e73b/icon.png" width = "200" height = "200" alt="project icon" />  
+GEO1101 Project 5: 3D Representations for Visual Insight  
 ## Team menbers  
 [@Runnan Fu](https://github.com/runnanfu)
 [@Yuzhen Jin](https://github.com/yuzhenjin3000)
