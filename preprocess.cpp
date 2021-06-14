@@ -20,8 +20,8 @@ void preprocess_pts(std::string& file_in,
     // segment the roof and floor components
     pcl::PointCloud<pcl::PointXYZI>::Ptr pts_rest (new pcl::PointCloud<pcl::PointXYZI>);
     pcl::PointCloud<pcl::PointXYZI>::Ptr pts_roof (new pcl::PointCloud<pcl::PointXYZI>);
-    extract_floors(pts_no_fake_faces, pts_roof, pts_rest, roof_idx, ground_idx, 0.1, 5);
+    extract_floors(pts_no_fake_faces, pts_roof, pts_rest, roof_idx, ground_idx, 0.1, 5, true, true);
     // -----------------------------------------------------------------------------------------------------------------
     // segment the non-architecture components
-    extract_non_archi(pts_roof, pts_rest, 0.05, 0.1, 10);
+    extract_non_archi(pts_roof, pts_rest, 0.05, 0.1, 10, true, true);
 }

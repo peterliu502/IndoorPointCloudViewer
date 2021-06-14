@@ -15,7 +15,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12250651-d0bb-4493-88b6-2c33796462b1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/meshes/MESH_rest_nonarchi.ply" beforeDir="false" afterPath="$PROJECT_DIR$/data/meshes/MESH_rest_nonarchi.ply" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_preprocessed.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_preprocessed.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_archi_A.ply" beforeDir="false" afterPath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_archi_A.ply" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_archi_A.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_archi_A.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_archi_B.ply" beforeDir="false" afterPath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_archi_B.ply" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_nonarchi_A.ply" beforeDir="false" afterPath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_nonarchi_A.ply" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_nonarchi_A.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_nonarchi_A.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_nonarchi_B.ply" beforeDir="false" afterPath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_nonarchi_B.ply" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/voxels/VOXEL_nonarchi.obj" beforeDir="false" afterPath="$PROJECT_DIR$/data/voxels/VOXEL_nonarchi.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preprocess.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/preprocess.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preprocess_methods.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/preprocess_methods.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +37,6 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Release-Visual Studio" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -59,7 +70,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../downloads/test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="CMakeSettings" />
   </component>
   <component name="RecentsManager">
@@ -68,7 +79,7 @@
       <recent name="E:\myPython\geo1101\code\geo1101\data" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake Application.geo1101">
+  <component name="RunManager" selected="Python.run">
     <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -79,10 +90,27 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
+    <configuration name="ls_filename" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="geo1101" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="D:\ProgramFiles\anaconda3\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../../HPM/data/NL-DLFT-200714_part_00_00" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../../HPM/data/NL-DLFT-200714_part_00_00/ls_filename.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <configuration name="run" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="geo1101" />
@@ -109,7 +137,13 @@
     <list>
       <item itemvalue="CMake Application.geo1101" />
       <item itemvalue="Python.run" />
+      <item itemvalue="Python.ls_filename" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.ls_filename" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -137,7 +171,10 @@
       <workItem from="1622218813924" duration="6319000" />
       <workItem from="1622494884468" duration="961000" />
       <workItem from="1622862517729" duration="215000" />
-      <workItem from="1622862747375" duration="2870000" />
+      <workItem from="1622862747375" duration="3209000" />
+      <workItem from="1623163371471" duration="480000" />
+      <workItem from="1623543102139" duration="659000" />
+      <workItem from="1623648754941" duration="4613000" />
     </task>
     <task id="LOCAL-00001" summary="remove the noise in remove_floors()">
       <created>1620463390170</created>
@@ -363,7 +400,21 @@
       <option name="project" value="LOCAL" />
       <updated>1622865476990</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="upd data">
+      <created>1622865665503</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1622865665503</updated>
+    </task>
+    <task id="LOCAL-00034" summary="upd data">
+      <created>1622865732701</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1622865732701</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

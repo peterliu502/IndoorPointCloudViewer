@@ -1,4 +1,5 @@
 #include <iostream>
+#include <ctime>
 #include <pcl/io/pcd_io.h>
 #include <pcl/io/ply_io.h>
 #include <pcl/kdtree/kdtree_flann.h>
@@ -229,6 +230,9 @@ void extract_floors(pcl::PointCloud<pcl::PointXYZI>::Ptr& pts,
                     int min_neighbours,
                     bool contain_mesh = false,
                     bool comtain_voxel = false){
+
+    clock_t start_all = clock();
+
     std::vector<double> vec_roof_z;
     std::vector<double> vec_ground_z;
     pcl::PointCloud<pcl::PointXYZI>::Ptr pts_roof(new pcl::PointCloud<pcl::PointXYZI>);
@@ -254,36 +258,71 @@ void extract_floors(pcl::PointCloud<pcl::PointXYZI>::Ptr& pts,
     remove_outliers(pts_ground, pts_ground_out, r, min_neighbours);
     remove_outliers(pts_rest, pts_rest_out, r, min_neighbours + 5);
 
+    clock_t end_all = clock();
+
     // output roof part
+    clock_t start_pointcloud1 = clock();
     pcl::io::savePLYFileASCII("./data/pointclouds/POINTCLOUDS_roof_A.ply", *pts_roof_out); // output PLY (ASCII) file
     std::cout << "OUTPUT: POINTCLOUDS_roof_A.ply" << std::endl;
     pcl::io::savePLYFileBinary("./data/pointclouds/POINTCLOUDS_roof_B.ply", *pts_roof_out); // output PLY (Binary) file
     std::cout << "OUTPUT: POINTCLOUDS_roof_B.ply" << std::endl;
     pcl::PointCloud<pcl::PointXYZ>::Ptr result_roof (new pcl::PointCloud<pcl::PointXYZ>);
+    clock_t end_pointcloud1 = clock();
+
+    clock_t start_mesh1;
+    clock_t end_mesh1;
     if (contain_mesh){
+        start_mesh1 = clock();
         mls_smooth(pts_roof_out, result_roof);
         pt2mesh("./data/meshes/MESH_roof.ply", result_roof); // output mesh file
         std::cout << "OUTPUT: MESH_roof.ply" << std::endl;
+        end_mesh1 = clock();
     }
+
+    clock_t start_voxel1;
+    clock_t end_voxel1;
     if (comtain_voxel){
+        start_voxel1 = clock();
         pt2voxel("./data/voxels/VOXEL_roof.obj", result_roof, 0.065); // output voxel file
         std::cout << "OUTPUT: VOXEL_roof.obj" << std::endl;
+        end_voxel1 = clock();
     }
 
     // output ground part
+    clock_t start_pointcloud2 = clock();
     pcl::io::savePLYFileASCII("./data/pointclouds/POINTCLOUDS_ground_A.ply", *pts_ground_out); // output PLY (ASCII) file
     std::cout << "OUTPUT: POINTCLOUDS_ground_A.ply" << std::endl;
     pcl::io::savePLYFileBinary("./data/pointclouds/POINTCLOUDS_ground_B.ply", *pts_ground_out); // output PLY (Binary) file
     std::cout << "OUTPUT: POINTCLOUDS_ground_B.ply" << std::endl;
     pcl::PointCloud<pcl::PointXYZ>::Ptr result_ground (new pcl::PointCloud<pcl::PointXYZ>);
+    clock_t end_pointcloud2 = clock();
+    std::cout << "pointcloud time: "
+              << (end_all - start_all + end_pointcloud1 - start_pointcloud1 + end_pointcloud2 - start_pointcloud2) / 1000
+              << std::endl;
+
+    clock_t start_mesh2;
+    clock_t end_mesh2;
     if (contain_mesh){
+        start_mesh2 = clock();
         mls_smooth(pts_ground_out, result_ground);
         pt2mesh("./data/meshes/MESH_ground.ply", result_ground); // output mesh file
         std::cout << "OUTPUT: MESH_ground.ply" << std::endl;
+        end_mesh2 = clock();
+        std::cout << "mesh time: "
+                  << (end_all - start_all + end_mesh1 - start_mesh1 + end_mesh2 - start_mesh2) / 1000
+                  << std::endl;
     }
+
+    clock_t start_voxel2;
+    clock_t end_voxel2;
     if (comtain_voxel){
+        start_voxel2 = clock();
         pt2voxel("./data/voxels/VOXEL_ground.obj", result_ground, 0.055); // output voxel file
         std::cout << "OUTPUT: VOXEL_ground.obj" << std::endl;
+        end_voxel2 = clock();
+        std::cout << "voxel time: "
+                  << (end_all - start_all + end_voxel1 - start_voxel1 + end_voxel2 - start_voxel2) / 1000
+                  << std::endl;
     }
 }
 
@@ -294,6 +333,9 @@ void extract_non_archi(pcl::PointCloud<pcl::PointXYZI>::Ptr& pts_roof,
                        int min_neighbours,
                        bool contain_mesh = false,
                        bool comtain_voxel = false){
+
+    clock_t start_all = clock();
+
     std::vector<double> vec_roof_heights;
     for (auto &pt: pts_roof->points) vec_roof_heights.push_back(pt.z);
     double min_roof_height = min_vec_elm(vec_roof_heights);
@@ -329,36 +371,71 @@ void extract_non_archi(pcl::PointCloud<pcl::PointXYZI>::Ptr& pts_roof,
     remove_outliers(pts_non_archi_tmp2, pts_non_archi_tmp3, r, min_neighbours + 6);
     remove_outliers(pts_non_archi_tmp3, pts_non_archi_out, r, min_neighbours + 9);
 
+    clock_t end_all = clock();
+
     // output architecture part
+    clock_t start_pointcloud1 = clock();
     pcl::io::savePLYFileASCII("./data/pointclouds/POINTCLOUDS_rest_archi_A.ply", *pts_archi); // output PLY (ASCII) file
     std::cout << "OUTPUT: POINTCLOUDS_rest_archi_A.ply" << std::endl;
     pcl::io::savePLYFileBinary("./data/pointclouds/POINTCLOUDS_rest_archi_B.ply", *pts_archi); // output PLY (Binary) file
     std::cout << "OUTPUT: POINTCLOUDS_rest_archi_B.ply" << std::endl;
     pcl::PointCloud<pcl::PointXYZ>::Ptr result_archi (new pcl::PointCloud<pcl::PointXYZ>);
+    clock_t end_pointcloud1 = clock();
+
+    clock_t start_mesh1;
+    clock_t end_mesh1;
     if (contain_mesh){
+        start_mesh1 = clock();
         mls_smooth(pts_archi, result_archi);
         pt2mesh("./data/meshes/MESH_rest_archi.ply", result_archi); // output mesh file
         std::cout << "OUTPUT: MESH_rest_archi.ply" << std::endl;
+        end_mesh1 = clock();
     }
+
+    clock_t start_voxel1;
+    clock_t end_voxel1;
     if (comtain_voxel){
+        start_voxel1 = clock();
         pt2voxel("./data/voxels/VOXEL_archi.obj", result_archi, 0.05); // output voxel file
         std::cout << "OUTPUT: VOXEL_archi.obj" << std::endl;
+        end_voxel1 = clock();
     }
 
     // output non-architecture part
+    clock_t start_pointcloud2 = clock();
     pcl::io::savePLYFileASCII("./data/pointclouds/POINTCLOUDS_rest_nonarchi_A.ply", *pts_non_archi_out); // output PLY (ASCII) file
     std::cout << "OUTPUT: POINTCLOUDS_rest_nonarchi_A.ply" << std::endl;
     pcl::io::savePLYFileBinary("./data/pointclouds/POINTCLOUDS_rest_nonarchi_B.ply", *pts_non_archi_out); // output PLY (Binary) file
     std::cout << "OUTPUT: POINTCLOUDS_rest_nonarchi_B.ply" << std::endl;
     pcl::PointCloud<pcl::PointXYZ>::Ptr result_non_archi (new pcl::PointCloud<pcl::PointXYZ>);
+    clock_t end_pointcloud2 = clock();
+    std::cout << "pointcloud time: "
+              << (end_all - start_all + end_pointcloud1 - start_pointcloud1 + end_pointcloud2 - start_pointcloud2) / 1000
+              << std::endl;
+
+    clock_t start_mesh2;
+    clock_t end_mesh2;
     if (contain_mesh){
+        start_mesh2 = clock();
         mls_smooth(pts_non_archi_out, result_non_archi);
         pt2mesh("./data/meshes/MESH_rest_nonarchi.ply", result_non_archi); // output mesh file
         std::cout << "OUTPUT: MESH_rest_nonarchi.ply" << std::endl;
+        end_mesh2 = clock();
+        std::cout << "mesh time: "
+                  << (end_all - start_all + end_mesh1 - start_mesh1 + end_mesh2 - start_mesh2) / 1000
+                  << std::endl;
     }
+
+    clock_t start_voxel2;
+    clock_t end_voxel2;
     if (comtain_voxel){
+        start_voxel2 = clock();
         pt2voxel("./data/voxels/VOXEL_nonarchi.obj", result_non_archi, 0.05); // output voxel file
         std::cout << "OUTPUT: VOXEL_nonarchi.obj" << std::endl;
+        end_voxel2 = clock();
+        std::cout << "voxel time: "
+                  << (end_all - start_all + end_voxel1 - start_voxel1 + end_voxel2 - start_voxel2) / 1000
+                  << std::endl;
     }
 }
 
