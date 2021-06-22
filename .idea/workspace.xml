@@ -15,19 +15,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12250651-d0bb-4493-88b6-2c33796462b1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/meshes/MESH_rest_nonarchi.ply" beforeDir="false" afterPath="$PROJECT_DIR$/data/meshes/MESH_rest_nonarchi.ply" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_preprocessed.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_preprocessed.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_archi_A.ply" beforeDir="false" afterPath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_archi_A.ply" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_archi_A.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_archi_A.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_archi_B.ply" beforeDir="false" afterPath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_archi_B.ply" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_nonarchi_A.ply" beforeDir="false" afterPath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_nonarchi_A.ply" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_nonarchi_A.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_nonarchi_A.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_nonarchi_B.ply" beforeDir="false" afterPath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_nonarchi_B.ply" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/voxels/VOXEL_nonarchi.obj" beforeDir="false" afterPath="$PROJECT_DIR$/data/voxels/VOXEL_nonarchi.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preprocess.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/preprocess.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preprocess_methods.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/preprocess_methods.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,11 +68,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.run">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="geo1101" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="geo1101" TARGET_NAME="geo1101" CONFIG_NAME="Release-Visual Studio" RUN_TARGET_PROJECT_NAME="geo1101" RUN_TARGET_NAME="geo1101">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -174,7 +157,7 @@
       <workItem from="1622862747375" duration="3209000" />
       <workItem from="1623163371471" duration="480000" />
       <workItem from="1623543102139" duration="659000" />
-      <workItem from="1623648754941" duration="4613000" />
+      <workItem from="1623648754941" duration="6143000" />
     </task>
     <task id="LOCAL-00001" summary="remove the noise in remove_floors()">
       <created>1620463390170</created>
@@ -414,7 +397,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622865732701</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="upd data">
+      <created>1623681907868</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1623681907868</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
