@@ -1,6 +1,8 @@
 # geo1101
-<img src="https://github.com/peterliu502/geo1101/blob/15bc6d1add02f13e49f17f500e70f854ec99e73b/icon.png" width = "200" height = "200" alt="project icon" />   
+<img src="https://github.com/peterliu502/geo1101/blob/15bc6d1add02f13e49f17f500e70f854ec99e73b/icon.png" width = "200" height = "200" alt = "project icon" div align = center />   
 
+Delft University of Technology  
+MSc. Geomatics Synthesis Project  
 GEO1101 Project 5: 3D Representations for Visual Insight  
 
 ## Team menbers  
