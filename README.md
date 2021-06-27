@@ -30,7 +30,8 @@ geo1101
  └─ py_methods.py: the functions and data structures written in Python
 
 ```
-## Instructions
+## Instructions  
+If you only need the final software, you can directly look at section [`How to run the IndoorPointCloudsViewer (release version)](https://github.com/peterliu502/IndoorPointCloudViewer#how-to-run-the-indoorpointcloudsviewer-release-version)`.  
 ### How to run the pointclouds preprocess program  
   1. Install PCL library  
 For `Windows` users, it is highly recommended to use [`Vcpkg`](https://github.com/microsoft/vcpkg/releases) to install [`PCL`](https://pointclouds.org/downloads/).  
