@@ -1,16 +1,16 @@
 # geo1101
-<img src="https://github.com/peterliu502/geo1101/blob/15bc6d1add02f13e49f17f500e70f854ec99e73b/icon.png" width = "200" height = "200" alt = "project icon" div align = center />   
+<div align=center><img src="https://github.com/peterliu502/geo1101/blob/15bc6d1add02f13e49f17f500e70f854ec99e73b/icon.png" width = "200" height = "200" alt = "project icon" /></div>   
 
 Delft University of Technology  
-MSc. Geomatics Synthesis Project  
-GEO1101 Project 5: 3D Representations for Visual Insight  
+MSc. Geomatics Synthesis (GEO1101) Project  
+Project 5: 3D Representations for Visual Insight  
 
 ## Team menbers  
-[@Runnan Fu](https://github.com/runnanfu)
-[@Yuzhen Jin](https://github.com/yuzhenjin3000)
-[@Zhenyu Liu](https://github.com/peterliu502)
-[@Xenia U. Mainelli](https://github.com/mainelli)
-[@Theodoros Papakostas](https://github.com/tpapakostas)
+[@Runnan Fu](https://github.com/runnanfu)  
+[@Yuzhen Jin](https://github.com/yuzhenjin3000)  
+[@Zhenyu Liu](https://github.com/peterliu502)  
+[@Xenia U. Mainelli](https://github.com/mainelli)  
+[@Theodoros Papakostas](https://github.com/tpapakostas)  
 [@Linjun Wang](https://github.com/fiodccobw)
 
 ## Files structure
