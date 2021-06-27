@@ -16,6 +16,7 @@
   <component name="ChangeListManager">
     <list default="true" id="12250651-d0bb-4493-88b6-2c33796462b1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,6 +159,7 @@
       <workItem from="1623163371471" duration="480000" />
       <workItem from="1623543102139" duration="659000" />
       <workItem from="1623648754941" duration="6143000" />
+      <workItem from="1624390240332" duration="1862000" />
     </task>
     <task id="LOCAL-00001" summary="remove the noise in remove_floors()">
       <created>1620463390170</created>
@@ -404,7 +406,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623681907868</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="upd 3Dengine folder and README.md">
+      <created>1624390315660</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1624390315660</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -441,6 +450,7 @@
     <MESSAGE value="correct typos" />
     <MESSAGE value="upd preprocess_methods.cpp" />
     <MESSAGE value="upd data" />
-    <option name="LAST_COMMIT_MESSAGE" value="upd data" />
+    <MESSAGE value="upd 3Dengine folder and README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="upd 3Dengine folder and README.md" />
   </component>
 </project>

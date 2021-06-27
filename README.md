@@ -71,6 +71,7 @@ The first run may take a long time.
 ### How to run the IndoorPointCloudsViewer (release version)  
   1. Download and unzip the game file  
 Download `IndoorPointCloudViewer` from [latest release version](https://github.com/peterliu502/IndoorPointCloudViewer/releases) and unzip it.  
+Currently the `IndoorPointCloudViewer` only has `Windows` version.
 
   2. Run game file  
 Open `.\IndoorPointcloudsViewer\thirdperson.exe` and enjoy it!  
