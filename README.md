@@ -1,5 +1,5 @@
 # IndoorPointCloudViewer
-<div align=center><img src="https://github.com/peterliu502/geo1101/blob/15bc6d1add02f13e49f17f500e70f854ec99e73b/icon.png" width = "200" height = "200" alt = "project icon" /></div>   
+<div align=center><img src="https://github.com/peterliu502/IndoorPointCloudViewer/blob/master/readme_img/icon.png" width = "200" height = "200" alt = "project icon" /></div>   
 
 Delft University of Technology  
 MSc. Geomatics Synthesis (GEO1101) Project  
@@ -81,6 +81,7 @@ __Currently the `IndoorPointCloudViewer` only has `Windows` version.__
 Open `.\IndoorPointcloudsViewer\thirdperson.exe` and enjoy it!  
 
 ## Functionality
+<div align=center><img src="https://github.com/peterliu502/IndoorPointCloudViewer/blob/master/readme_img/function.png" alt = "Functionality" /></div>   
 
 ```
 (A) View the point cloud data in first-person perspective, and the shape of the points is set as circles.
