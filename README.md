@@ -1,9 +1,10 @@
-# geo1101
+# IndoorPointCloudViewer
 <div align=center><img src="https://github.com/peterliu502/geo1101/blob/15bc6d1add02f13e49f17f500e70f854ec99e73b/icon.png" width = "200" height = "200" alt = "project icon" /></div>   
 
 Delft University of Technology  
 MSc. Geomatics Synthesis (GEO1101) Project  
 Project 5: 3D Representations for Visual Insight  
+Download project report and introduction video from: http://resolver.tudelft.nl/uuid:a6c4f703-b048-40e3-9661-be00c0fab804   
 
 ## Team menbers  
 [@Runnan Fu](https://github.com/runnanfu)  
@@ -62,7 +63,7 @@ The meaning of the 4th attribute values in txt files:
 Install [Unreal Engine 4 (UE4)](www.unrealengine.com) (`version 4.26` or later).  
 
   2. Download and unzip the project file  
-Download `IndoorPointcloudsViewer_project` from [latest release version](https://github.com/peterliu502/IndoorPointCloudViewer/releases) and unzip it.  
+Download `IndoorPointcloudsViewer_project.7z` from [latest release version](https://github.com/peterliu502/IndoorPointCloudViewer/releases) and unzip it.  
 
   3. Open project file in UE4  
 The path of UE4 project file: `.\IndoorPointcloudsViewer_project\thirdperson.uproject`.
@@ -73,8 +74,34 @@ The first run may take a long time.
 
 ### How to run the IndoorPointCloudsViewer (release version)  
   1. Download and unzip the game file  
-Download `IndoorPointCloudViewer` from [latest release version](https://github.com/peterliu502/IndoorPointCloudViewer/releases) and unzip it.  
-Currently the `IndoorPointCloudViewer` only has `Windows` version.
+Download `IndoorPointCloudViewer.7z` from [latest release version](https://github.com/peterliu502/IndoorPointCloudViewer/releases) and unzip it.  
+__Currently the `IndoorPointCloudViewer` only has `Windows` version.__
 
   2. Run game file  
 Open `.\IndoorPointcloudsViewer\thirdperson.exe` and enjoy it!  
+
+## Functionality
+
+```
+(A) View the point cloud data in first-person perspective, and the shape of the points is set as circles.
+(B) View the point cloud data in first-person perspective, and the shape of the points is set as squares.
+(C) View the point cloud in third-person perspective.
+(D) View the point cloud data in bird’s eye view, the positions of the avatar and the red target can be identified.
+(E) Set the point size as the smallest size.
+(F) Set the point size as the biggest size.
+(G) View the point cloud in style 1.
+(H) View the point cloud in style 2.
+```  
+
+## Citation  
+If you want to cite this project in your work, you can use following `bibtex` entry:  
+```
+@article{fu_3d_2021,
+	title = {{3D} {Representations} for {Visual} {Insight}},
+	url = {https://repository.tudelft.nl/islandora/object/uuid%3Aa6c4f703-b048-40e3-9661-be00c0fab804},
+	abstract = {As a method that can accurately represent 3D spatial information, point cloud visualisation for indoor environments is still a relatively unexplored field of research. Our client for this project, the Dutch National Police, requested a variety of potential solutions for visualising (unfamiliar) indoor environments that can be viewed by both external command centres, and internal operations units. Currently, unknown interior layouts (or layouts that are different in practise to what is stated on paper) can have serious, sometimes even life-threatening, consequences in time-sensitive situations. This project uses a game engine to directly visualise point cloud data input of indoor environments. The primary aim is to find ways of clearly communicating a point cloud of an environment to a layman viewer through intuitive visualisations, to aid decision-making in high-stress moments. The final product is a variety of visualisation concepts, hosted within a game engine in order to allow users to navigate throughout (part of) a building, and customise certain interaction features. To aid the layman viewer, various interpretation methods (e.g. cartography) are considered. The Unreal Engine 4 (UE4) project was designed and developed based on the requirements given by Dutch Police, and consisted of 4 modules: data preprocessing, render style, functional module, and User Interface (UI). An indoor point cloud dataset is used for the implementation, while corresponding mesh and voxel models are also respectively generated and evaluated as reference objects. The implemented software product is evaluated based on a Structured Expert Evaluation Method and finally our project result demonstrates that point cloud has unique advantages for visualisation of indoor environments especially in pre-processing efficiency, detail level, and volume perception.},
+	language = {en},
+	author = {Fu, Runnan and Jin, Yuzhen and Liu, Zhenyu and Mainelli, Xenia Una and Papakostas, Theodoros and Wang, Linjun},
+	year = {2021}
+}
+```
