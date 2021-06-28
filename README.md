@@ -98,11 +98,11 @@ Open `.\IndoorPointcloudsViewer\thirdperson.exe` and enjoy it!
 If you want to cite this project in your work, you can use following `bibtex` entry:  
 ```
 @article{fu_3d_2021,
-	title = {{3D} {Representations} for {Visual} {Insight}},
-	url = {https://repository.tudelft.nl/islandora/object/uuid%3Aa6c4f703-b048-40e3-9661-be00c0fab804},
+	title    = {{3D} {Representations} for {Visual} {Insight}},
+	url      = {https://repository.tudelft.nl/islandora/object/uuid%3Aa6c4f703-b048-40e3-9661-be00c0fab804},
 	abstract = {As a method that can accurately represent 3D spatial information, point cloud visualisation for indoor environments is still a relatively unexplored field of research. Our client for this project, the Dutch National Police, requested a variety of potential solutions for visualising (unfamiliar) indoor environments that can be viewed by both external command centres, and internal operations units. Currently, unknown interior layouts (or layouts that are different in practise to what is stated on paper) can have serious, sometimes even life-threatening, consequences in time-sensitive situations. This project uses a game engine to directly visualise point cloud data input of indoor environments. The primary aim is to find ways of clearly communicating a point cloud of an environment to a layman viewer through intuitive visualisations, to aid decision-making in high-stress moments. The final product is a variety of visualisation concepts, hosted within a game engine in order to allow users to navigate throughout (part of) a building, and customise certain interaction features. To aid the layman viewer, various interpretation methods (e.g. cartography) are considered. The Unreal Engine 4 (UE4) project was designed and developed based on the requirements given by Dutch Police, and consisted of 4 modules: data preprocessing, render style, functional module, and User Interface (UI). An indoor point cloud dataset is used for the implementation, while corresponding mesh and voxel models are also respectively generated and evaluated as reference objects. The implemented software product is evaluated based on a Structured Expert Evaluation Method and finally our project result demonstrates that point cloud has unique advantages for visualisation of indoor environments especially in pre-processing efficiency, detail level, and volume perception.},
 	language = {en},
-	author = {Fu, Runnan and Jin, Yuzhen and Liu, Zhenyu and Mainelli, Xenia Una and Papakostas, Theodoros and Wang, Linjun},
-	year = {2021}
+	author   = {Fu, Runnan and Jin, Yuzhen and Liu, Zhenyu and Mainelli, Xenia Una and Papakostas, Theodoros and Wang, Linjun},
+	year     = {2021}
 }
 ```
