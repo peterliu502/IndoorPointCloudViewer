@@ -14,9 +14,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12250651-d0bb-4493-88b6-2c33796462b1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="12250651-d0bb-4493-88b6-2c33796462b1" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -159,7 +157,7 @@
       <workItem from="1623543102139" duration="659000" />
       <workItem from="1623648754941" duration="6143000" />
       <workItem from="1624390240332" duration="3514000" />
-      <workItem from="1624874883963" duration="1833000" />
+      <workItem from="1624874883963" duration="1947000" />
     </task>
     <task id="LOCAL-00001" summary="remove the noise in remove_floors()">
       <created>1620463390170</created>
@@ -469,7 +467,21 @@
       <option name="project" value="LOCAL" />
       <updated>1624877256735</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="upd README.md">
+      <created>1624877434385</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1624877434385</updated>
+    </task>
+    <task id="LOCAL-00046" summary="upd README.md">
+      <created>1624877530949</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1624877530949</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
