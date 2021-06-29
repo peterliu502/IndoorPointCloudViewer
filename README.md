@@ -19,9 +19,9 @@ Download the project report and the introduction video from: http://resolver.tud
 geo1101
  ├─ 3Dengine: UE4 project files
  ├─ data: store the input and output files
- │   ├─ pointclouds: store the point clouds data
- │   ├─ meshes: store the meshes data
- │   └─ voxels: store the voxels data
+ │   ├─ pointclouds: store the input and generated point clouds data
+ │   ├─ meshes: store the generated meshes data
+ │   └─ voxels: store the generated voxels data
  ├─ voxeliser: the module of voxelization, based on the GEO1004 HW01
  ├─ main.cpp: the main workflow of the whole project
  ├─ preprocess.cpp: the workflow of the preprocess
@@ -47,7 +47,10 @@ The tutorial for `Mac` or `Linux` click [here](https://doc.cgal.org/latest/Manua
   3. Compile the CPP program  
 Using Release mode to build the `main.cpp`, then the build folder will be created.  
 
-  4. Run run.py  
+  4. Set input pointcloud data  
+  Put the input point cloud file in `.\data\pointclouds` and name as `VRR.pcd`.
+
+  5. Run run.py  
 Run the `run.py` and the output files are in the `./data` folder  
 The meaning of the 4th attribute values in txt files:  
 ```

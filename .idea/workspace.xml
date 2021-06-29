@@ -14,31 +14,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12250651-d0bb-4493-88b6-2c33796462b1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/meshes/MESH_ground.ply" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/meshes/MESH_rest_archi.ply" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/meshes/MESH_rest_nonarchi.ply" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/meshes/MESH_roof.ply" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_ground_A.ply" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_ground_A.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_ground_B.ply" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_preprocessed.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_archi_A.ply" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_archi_A.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_archi_B.ply" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_nonarchi_A.ply" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_nonarchi_A.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_rest_nonarchi_B.ply" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_roof_A.ply" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_roof_A.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/pointclouds/POINTCLOUDS_roof_B.ply" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/pointclouds/VRR.pcd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/voxels/VOXEL_archi.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/voxels/VOXEL_ground.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/voxels/VOXEL_nonarchi.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/voxels/VOXEL_roof.obj" beforeDir="false" />
-    </list>
+    <list default="true" id="12250651-d0bb-4493-88b6-2c33796462b1" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -189,7 +165,7 @@
       <workItem from="1624874883963" duration="1947000" />
       <workItem from="1624878131225" duration="639000" />
       <workItem from="1624898045139" duration="268000" />
-      <workItem from="1624898479899" duration="6701000" />
+      <workItem from="1624898479899" duration="7339000" />
     </task>
     <task id="LOCAL-00001" summary="remove the noise in remove_floors()">
       <created>1620463390170</created>
@@ -520,7 +496,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624878147160</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="upd README.md">
+      <created>1624978691805</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1624978691805</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
