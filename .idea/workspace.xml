@@ -8,13 +8,16 @@
       <config projectName="geo1101" targetName="geo1101" />
     </generated>
   </component>
-  <component name="CMakeSettings">
+  <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
-      <configuration PROFILE_NAME="Release-Visual Studio" CONFIG_NAME="Release" TOOLCHAIN_NAME="Visual Studio" GENERATION_OPTIONS="-DCMAKE_TOOLCHAIN_FILE=D:/ProgramFiles/vcpkg/scripts/buildsystems/vcpkg.cmake" ENABLED="true" />
+      <configuration PROFILE_NAME="Release-Visual Studio" ENABLED="true" CONFIG_NAME="Release" TOOLCHAIN_NAME="Visual Studio" GENERATION_OPTIONS="-DCMAKE_TOOLCHAIN_FILE=D:/ProgramFiles/vcpkg/scripts/buildsystems/vcpkg.cmake" />
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12250651-d0bb-4493-88b6-2c33796462b1" name="Default Changelist" comment="" />
+    <list default="true" id="12250651-d0bb-4493-88b6-2c33796462b1" name="Default Changelist" comment="upd README.md">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,10 +56,13 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../geo1004/hw3/tree" />
+    <property name="cidr.known.project.marker" value="true" />
+    <property name="cmake.loaded.for.project" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="CMakeSettings" />
   </component>
   <component name="RecentsManager">
@@ -66,12 +72,17 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.run">
-    <configuration name="geo1101" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="geo1101" TARGET_NAME="geo1101" CONFIG_NAME="Release-Visual Studio" RUN_TARGET_PROJECT_NAME="geo1101" RUN_TARGET_NAME="geo1101">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="geo1101" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="geo1101" TARGET_NAME="geo1101" CONFIG_NAME="Release-Visual Studio" RUN_TARGET_PROJECT_NAME="geo1101" RUN_TARGET_NAME="geo1101">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -165,7 +176,10 @@
       <workItem from="1624874883963" duration="1947000" />
       <workItem from="1624878131225" duration="639000" />
       <workItem from="1624898045139" duration="268000" />
-      <workItem from="1624898479899" duration="7339000" />
+      <workItem from="1624898479899" duration="7795000" />
+      <workItem from="1625003051496" duration="10186000" />
+      <workItem from="1626239519550" duration="52000" />
+      <workItem from="1637652980646" duration="543000" />
     </task>
     <task id="LOCAL-00001" summary="remove the noise in remove_floors()">
       <created>1620463390170</created>
@@ -503,7 +517,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624978691805</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="upd README.md">
+      <created>1624980346476</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1624980346476</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

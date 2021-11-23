@@ -5,6 +5,7 @@ Delft University of Technology
 MSc. Geomatics Synthesis (GEO1101) Project  
 Project 5: 3D Representations for Visual Insight  
 Download the project report and the introduction video from: http://resolver.tudelft.nl/uuid:a6c4f703-b048-40e3-9661-be00c0fab804   
+The paper based on this project has been published in **LBS2021** conference and it can be downloaded from https://doi.org/10.34726/1786  
 
 ## Team menbers  
 [@Runnan Fu](https://github.com/runnanfu)  
