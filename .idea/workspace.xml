@@ -14,9 +14,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12250651-d0bb-4493-88b6-2c33796462b1" name="Default Changelist" comment="upd README.md">
+    <list default="true" id="12250651-d0bb-4493-88b6-2c33796462b1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,9 +71,9 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.run">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="geo1101" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="geo1101" TARGET_NAME="geo1101" CONFIG_NAME="Release-Visual Studio" RUN_TARGET_PROJECT_NAME="geo1101" RUN_TARGET_NAME="geo1101">
@@ -179,14 +178,8 @@
       <workItem from="1624898479899" duration="7795000" />
       <workItem from="1625003051496" duration="10186000" />
       <workItem from="1626239519550" duration="52000" />
-      <workItem from="1637652980646" duration="543000" />
-    </task>
-    <task id="LOCAL-00001" summary="remove the noise in remove_floors()">
-      <created>1620463390170</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1620463390170</updated>
+      <workItem from="1637652980646" duration="558000" />
+      <workItem from="1639406851781" duration="331000" />
     </task>
     <task id="LOCAL-00002" summary="segment the non-archi part">
       <created>1620487826752</created>
@@ -524,7 +517,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624980346476</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="upd README.md">
+      <created>1637653534920</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1637653534920</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
